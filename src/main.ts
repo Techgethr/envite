@@ -21,7 +21,6 @@ app.innerHTML = `
         </nav>
         <div class="envite-header-cta">
           <button class="btn-outline">Sign in</button>
-          <button class="btn-primary">Launch mock dApp</button>
         </div>
       </div>
     </header>
@@ -37,8 +36,7 @@ app.innerHTML = `
               FX, commodities, corporate events and economic policy outcomes, built on the Canton network.
             </p>
             <div class="hero-actions">
-              <button class="btn-primary">Explore markets (mock)</button>
-              <button class="btn-ghost">View product deck</button>
+              <button class="btn-primary">Explore markets</button>
             </div>
             <div class="hero-footnote">
               This is a non-production mockup for design and discovery purposes only. No real trading or assets.
@@ -165,6 +163,10 @@ app.innerHTML = `
             <p>
               Each board below shows how Envite could present a curated set of markets around a single theme. Prices
               and volumes are purely illustrative.
+            </p>
+            <p class="section-subcopy">
+              Use the links above from the main Markets section to open a single category in focus mode. From there you
+              can always return to the full overview.
             </p>
           </header>
 
@@ -618,3 +620,102 @@ app.innerHTML = `
     </footer>
   </div>
 `
+
+type CategoryId =
+  | 'rates-markets'
+  | 'inflation-markets'
+  | 'fx-markets'
+  | 'commodities-markets'
+  | 'corporate-markets'
+  | 'policy-markets'
+
+const root = document.querySelector<HTMLDivElement>('.envite-root')
+const main = root?.querySelector<HTMLElement>('main')
+const marketCategories = root?.querySelector<HTMLElement>('#market-categories')
+
+function showCategory(categoryId?: CategoryId) {
+  if (!root || !main || !marketCategories) return
+
+  const sections = Array.from(main.querySelectorAll<HTMLElement>('section'))
+  const panels = Array.from(marketCategories.querySelectorAll<HTMLElement>('.category-panel'))
+
+  if (!categoryId) {
+    // Home / overview: show all sections and all category panels
+    sections.forEach((section) => {
+      section.style.display = ''
+    })
+    panels.forEach((panel) => {
+      panel.style.display = ''
+    })
+    marketCategories.classList.remove('category-page')
+    root.classList.remove('category-view')
+    return
+  }
+
+  // Category view: hide everything except the category board
+  sections.forEach((section) => {
+    if (section.id === 'market-categories') {
+      section.style.display = ''
+    } else {
+      section.style.display = 'none'
+    }
+  })
+
+  panels.forEach((panel) => {
+    if (panel.id === categoryId) {
+      panel.style.display = ''
+    } else {
+      panel.style.display = 'none'
+    }
+  })
+
+  marketCategories.classList.add('category-page')
+  root.classList.add('category-view')
+}
+
+function wireCategoryNavigation() {
+  if (!root || !main || !marketCategories) return
+
+  const categoryLinks = Array.from(
+    root.querySelectorAll<HTMLAnchorElement>('.category-links a'),
+  )
+
+  categoryLinks.forEach((link) => {
+    const href = link.getAttribute('href')
+    const targetId = href?.startsWith('#') ? (href.slice(1) as CategoryId) : undefined
+    if (!targetId) return
+
+    link.addEventListener('click', (event) => {
+      event.preventDefault()
+      showCategory(targetId)
+    })
+  })
+
+  const homeLinks = Array.from(
+    root.querySelectorAll<HTMLAnchorElement>('.envite-logo, .envite-nav a[href="#home"]'),
+  )
+
+  homeLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault()
+      // Reset URL hash but keep scroll behavior simple for the hero section
+      window.location.hash = '#home'
+      showCategory(undefined)
+    })
+  })
+
+  const overviewLinks = Array.from(
+    root.querySelectorAll<HTMLAnchorElement>('.back-to-overview'),
+  )
+
+  overviewLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault()
+      showCategory(undefined)
+      window.location.hash = '#markets'
+    })
+  })
+}
+
+showCategory(undefined)
+wireCategoryNavigation()

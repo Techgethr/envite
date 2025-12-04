@@ -305,6 +305,12 @@ main {
   font-size: 0.98rem;
 }
 
+.section-subcopy {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  color: #9ca3af;
+}
+
 .section-header.narrow {
   max-width: 40rem;
 }
@@ -493,6 +499,23 @@ main {
 .market-table td:nth-child(4) {
   font-variant-numeric: tabular-nums;
   color: #a5b4fc;
+}
+
+.category-page .section-header h2 {
+  margin-bottom: 0.2rem;
+}
+
+.category-page .section-header p {
+  max-width: 44rem;
+}
+
+.category-page .category-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.category-page .category-panel {
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 .canton-layout {
