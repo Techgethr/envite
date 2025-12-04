@@ -145,6 +145,276 @@ app.innerHTML = `
               </ul>
             </article>
           </div>
+
+          <div class="category-links">
+            <span class="category-label">Sample category boards (mock data):</span>
+            <a href="#rates-markets">Rates</a>
+            <a href="#inflation-markets">Inflation &amp; growth</a>
+            <a href="#fx-markets">FX</a>
+            <a href="#commodities-markets">Commodities</a>
+            <a href="#corporate-markets">Corporate events</a>
+            <a href="#policy-markets">Public policy</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="market-categories" class="section">
+        <div class="section-inner">
+          <header class="section-header">
+            <h2>Category boards with simulated markets.</h2>
+            <p>
+              Each board below shows how Envite could present a curated set of markets around a single theme. Prices
+              and volumes are purely illustrative.
+            </p>
+          </header>
+
+          <div class="category-grid">
+            <article id="rates-markets" class="category-panel card">
+              <h3>Interest rate markets</h3>
+              <p>Binary markets on policy decisions and yield levels along the curve.</p>
+              <table class="market-table">
+                <thead>
+                  <tr>
+                    <th>Market</th>
+                    <th>Settlement</th>
+                    <th>Yes price</th>
+                    <th>Volume (demo)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Fed – target rate &gt; 5.25% after Dec 2025 meeting</td>
+                    <td>17 Dec 2025</td>
+                    <td>0.61</td>
+                    <td>USD 28.4m</td>
+                  </tr>
+                  <tr>
+                    <td>ECB – at least 50 bps of cuts by Jun 2026</td>
+                    <td>25 Jun 2026</td>
+                    <td>0.44</td>
+                    <td>EUR 15.7m</td>
+                  </tr>
+                  <tr>
+                    <td>10Y gov bond yield &gt; 4.75% on 30 Jun 2026</td>
+                    <td>30 Jun 2026</td>
+                    <td>0.37</td>
+                    <td>USD 9.2m</td>
+                  </tr>
+                  <tr>
+                    <td>2s10s curve &gt;= 0 bps on 31 Dec 2025</td>
+                    <td>31 Dec 2025</td>
+                    <td>0.53</td>
+                    <td>USD 6.0m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article id="inflation-markets" class="category-panel card">
+              <h3>Inflation &amp; growth markets</h3>
+              <p>Markets linked to CPI, GDP growth and labor indicators.</p>
+              <table class="market-table">
+                <thead>
+                  <tr>
+                    <th>Market</th>
+                    <th>Settlement</th>
+                    <th>Yes price</th>
+                    <th>Volume (demo)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>US headline CPI YoY &lt;= 2.5% in Q4 2026</td>
+                    <td>15 Jan 2027</td>
+                    <td>0.39</td>
+                    <td>USD 12.8m</td>
+                  </tr>
+                  <tr>
+                    <td>Core CPI surprise within ±10 bps vs. consensus (next print)</td>
+                    <td>Next CPI release</td>
+                    <td>0.47</td>
+                    <td>USD 4.5m</td>
+                  </tr>
+                  <tr>
+                    <td>Real GDP growth &gt;= 3.0% YoY in 2026 after reform package</td>
+                    <td>31 Mar 2027</td>
+                    <td>0.32</td>
+                    <td>Local ccy 7.9m</td>
+                  </tr>
+                  <tr>
+                    <td>Unemployment rate stays below 5.0% through 2025</td>
+                    <td>31 Dec 2025</td>
+                    <td>0.58</td>
+                    <td>USD 5.1m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article id="fx-markets" class="category-panel card">
+              <h3>FX markets</h3>
+              <p>Directional and range markets on major and local currency pairs.</p>
+              <table class="market-table">
+                <thead>
+                  <tr>
+                    <th>Market</th>
+                    <th>Settlement</th>
+                    <th>Yes price</th>
+                    <th>Volume (demo)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>EUR / USD &gt; 1.15 on 31 Dec 2025</td>
+                    <td>31 Dec 2025</td>
+                    <td>0.51</td>
+                    <td>USD 10.3m</td>
+                  </tr>
+                  <tr>
+                    <td>USD / JPY &gt; 160 at any close in Q1 2026</td>
+                    <td>31 Mar 2026</td>
+                    <td>0.28</td>
+                    <td>USD 6.2m</td>
+                  </tr>
+                  <tr>
+                    <td>Local FX trades within ±5% band vs. USD in 2026</td>
+                    <td>31 Dec 2026</td>
+                    <td>0.64</td>
+                    <td>USD 3.4m</td>
+                  </tr>
+                  <tr>
+                    <td>BRL / USD &gt; 6.00 after presidential election</td>
+                    <td>Election + 30d</td>
+                    <td>0.21</td>
+                    <td>USD 2.1m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article id="commodities-markets" class="category-panel card">
+              <h3>Commodities markets</h3>
+              <p>Outcome tokens linked to energy, metals and agriculture.</p>
+              <table class="market-table">
+                <thead>
+                  <tr>
+                    <th>Market</th>
+                    <th>Settlement</th>
+                    <th>Yes price</th>
+                    <th>Volume (demo)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>WTI crude &gt; USD 100/bbl on 31 Mar 2026</td>
+                    <td>31 Mar 2026</td>
+                    <td>0.29</td>
+                    <td>USD 8.7m</td>
+                  </tr>
+                  <tr>
+                    <td>Gold &gt; USD 2,500/oz at any close in 2026</td>
+                    <td>31 Dec 2026</td>
+                    <td>0.35</td>
+                    <td>USD 5.6m</td>
+                  </tr>
+                  <tr>
+                    <td>Copper &gt; 15k USD/ton after major infrastructure bill</td>
+                    <td>Bill + 90d</td>
+                    <td>0.26</td>
+                    <td>USD 3.3m</td>
+                  </tr>
+                  <tr>
+                    <td>Global wheat index &gt; 20% above 5y average in 2026</td>
+                    <td>31 Dec 2026</td>
+                    <td>0.41</td>
+                    <td>USD 2.9m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article id="corporate-markets" class="category-panel card">
+              <h3>Corporate event markets</h3>
+              <p>Tokenized views on mergers, earnings and product launches.</p>
+              <table class="market-table">
+                <thead>
+                  <tr>
+                    <th>Market</th>
+                    <th>Settlement</th>
+                    <th>Yes price</th>
+                    <th>Volume (demo)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>TechCo / FinCo merger closes before 30 Jun 2026</td>
+                    <td>30 Jun 2026</td>
+                    <td>0.57</td>
+                    <td>USD 1.9m</td>
+                  </tr>
+                  <tr>
+                    <td>GlobalBank Q4 EPS &gt; 10% above consensus</td>
+                    <td>Earnings + 2d</td>
+                    <td>0.33</td>
+                    <td>USD 1.2m</td>
+                  </tr>
+                  <tr>
+                    <td>ConsumerCo launches new flagship product by Q3 2026</td>
+                    <td>30 Sep 2026</td>
+                    <td>0.61</td>
+                    <td>USD 0.8m</td>
+                  </tr>
+                  <tr>
+                    <td>AutoCo credit rating upgraded at least one notch in 2025</td>
+                    <td>31 Dec 2025</td>
+                    <td>0.24</td>
+                    <td>USD 0.6m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article id="policy-markets" class="category-panel card">
+              <h3>Public policy markets</h3>
+              <p>Markets around the realized impact of reforms and public programs.</p>
+              <table class="market-table">
+                <thead>
+                  <tr>
+                    <th>Market</th>
+                    <th>Settlement</th>
+                    <th>Yes price</th>
+                    <th>Volume (demo)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Labor reform passes both houses before 31 Dec 2025</td>
+                    <td>31 Dec 2025</td>
+                    <td>0.48</td>
+                    <td>Local ccy 1.4m</td>
+                  </tr>
+                  <tr>
+                    <td>GDP growth &gt;= 1.5pp above baseline two years after tax reform</td>
+                    <td>+24 months</td>
+                    <td>0.27</td>
+                    <td>Local ccy 0.9m</td>
+                  </tr>
+                  <tr>
+                    <td>Public infrastructure program reaches &gt; 80% execution by 2027</td>
+                    <td>31 Dec 2027</td>
+                    <td>0.63</td>
+                    <td>Local ccy 0.7m</td>
+                  </tr>
+                  <tr>
+                    <td>Youth unemployment falls &gt; 3pp within three years of policy package</td>
+                    <td>+36 months</td>
+                    <td>0.31</td>
+                    <td>Local ccy 0.6m</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
         </div>
       </section>
 

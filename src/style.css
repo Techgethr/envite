@@ -395,6 +395,106 @@ main {
   color: #cbd5f5;
 }
 
+.category-links {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.category-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-right: 0.4rem;
+}
+
+.category-links a {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.category-links a:hover {
+  background: rgba(30, 64, 175, 0.9);
+  border-color: rgba(96, 165, 250, 0.9);
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem;
+}
+
+.category-panel {
+  padding-top: 1.15rem;
+}
+
+.category-panel h3 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.category-panel p {
+  margin-bottom: 0.8rem;
+}
+
+.market-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.market-table thead {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.market-table th,
+.market-table td {
+  padding: 0.4rem 0.35rem;
+  text-align: left;
+}
+
+.market-table th {
+  font-weight: 600;
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(55, 65, 81, 0.9);
+}
+
+.market-table td {
+  color: #d1d5db;
+  border-bottom: 1px dashed rgba(55, 65, 81, 0.6);
+}
+
+.market-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.market-table tbody tr:nth-child(even) td {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.market-table tbody tr:nth-child(odd) td {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.market-table td:nth-child(3) {
+  font-variant-numeric: tabular-nums;
+  color: #4ade80;
+}
+
+.market-table td:nth-child(4) {
+  font-variant-numeric: tabular-nums;
+  color: #a5b4fc;
+}
+
 .canton-layout {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
@@ -561,5 +661,9 @@ main {
   .footer-links {
     width: 100%;
     justify-content: space-between;
+  }
+
+  .category-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
