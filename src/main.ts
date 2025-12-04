@@ -691,8 +691,7 @@ app.innerHTML = `
           <div>
             <h4>Resources</h4>
             <a href="#faq">FAQ</a>
-            <a href="#">Canton network</a>
-            <a href="#">Design notes</a>
+            <a href="https://www.canton.network/" target="_blank">Canton network</a>
           </div>
         </div>
       </div>
