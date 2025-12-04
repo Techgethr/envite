@@ -36,11 +36,16 @@ app.innerHTML = `
               FX, commodities, corporate events and economic policy outcomes, built on the Canton network.
             </p>
             <div class="hero-actions">
-              <button class="btn-primary">Explore markets</button>
+              <a
+                class="btn-primary"
+                href="https://form.typeform.com/to/ZiXTJCnc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Contact us
+              </a>
             </div>
-            <div class="hero-footnote">
-              This is a non-production mockup for design and discovery purposes only. No real trading or assets.
-            </div>
+            
           </div>
 
           <div class="hero-panel">
@@ -159,7 +164,7 @@ app.innerHTML = `
       <section id="market-categories" class="section">
         <div class="section-inner">
           <header class="section-header">
-            <h2>Category boards with simulated markets.</h2>
+            <h2>Category boards</h2>
             <p>
               Each board below shows how Envite could present a curated set of markets around a single theme. Prices
               and volumes are purely illustrative.
@@ -423,10 +428,9 @@ app.innerHTML = `
       <section id="how-it-works" class="section">
         <div class="section-inner">
           <header class="section-header narrow">
-            <h2>How Envite would work.</h2>
+            <h2>How Envite works</h2>
             <p>
-              Envite is a design prototype showing how regulated financial institutions could use a permissioned
-              blockchain like Canton to issue, trade and settle tokenized prediction instruments.
+              Envite is a platform that allows you to create and trade prediction markets on Canton to issue, trade and settle tokenized prediction instruments.
             </p>
           </header>
 
@@ -596,7 +600,7 @@ app.innerHTML = `
         <div>
           <div class="envite-logo">Envite</div>
           <p class="footer-copy">
-            Concept interface for institutional-grade prediction markets on the Canton network.
+            Institutional-grade prediction markets on the Canton network.
           </p>
         </div>
         <div class="footer-links">
@@ -615,7 +619,7 @@ app.innerHTML = `
         </div>
       </div>
       <div class="footer-bottom">
-        <span>Demo only – not an offer to sell or solicit any financial instrument.</span>
+        <span>Built by <a href="https://www.techgethr.com" target="_blank">Techgethr</a></span>
       </div>
     </footer>
   </div>
